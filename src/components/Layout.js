@@ -6,7 +6,7 @@ import PropTypes from "prop-types"
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div className={"layout-container"}>
       <Header />
       {React.Children.map(children, (child) =>
         React.isValidElement(child) ? React.cloneElement(child, {}) : null

@@ -6,13 +6,15 @@ import PropTypes from "prop-types"
 
 const Layout = ({ children }) => {
   return (
-    <div className={"layout-container"}>
+    <React.Fragment>
       <Header />
-      {React.Children.map(children, (child) =>
-        React.isValidElement(child) ? React.cloneElement(child, {}) : null
-      )}
+      <main>
+        {React.Children.map(children, (child) =>
+          React.isValidElement(child) ? React.cloneElement(child, {}) : null
+        )}
+      </main>
       <Footer />
-    </div>
+    </React.Fragment>
   )
 }
 

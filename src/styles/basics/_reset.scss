@@ -1,0 +1,14 @@
+@use '../helpers/variables'; // From HELPERS
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Gilroy-Light", Arial, Helvetica, sans-serif;
+  background: variables.$bg-main-color;
+  color: variables.$text-main-color;
+}

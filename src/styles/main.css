@@ -16,9 +16,58 @@
 
 body {
   margin: 0;
+  min-height: 100vh;
   font-family: "Gilroy-Light", Arial, Helvetica, sans-serif;
   background: #354147;
   color: #ffff;
+}
+
+.svg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 15px;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-main {
+  position: relative;
+  width: 108px;
+  height: 24px;
+}
+
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+.burger-menu__line {
+  width: 100%;
+  height: 2px;
+  background: #ffff;
+}
+
+.header-account__svg {
+  position: relative;
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */

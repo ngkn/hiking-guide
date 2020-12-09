@@ -6,7 +6,7 @@ import PropTypes from "prop-types"
 
 const Layout = ({ children }) => {
   return (
-    <React.Fragment>
+    <div className={"layout"}>
       <Header />
       <main>
         {React.Children.map(children, (child) =>
@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
         )}
       </main>
       <Footer />
-    </React.Fragment>
+    </div>
   )
 }
 

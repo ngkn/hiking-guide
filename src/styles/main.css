@@ -1,0 +1,24 @@
+/* https://create-react-app.dev/docs/adding-css-reset */
+@import-normalize;
+@font-face {
+  font-family: "Gilroy-Light";
+  src: url("/src/fonts/Gilroy-Light.otf") format("truetype");
+}
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("/src/fonts/Gilroy-ExtraBold.otf") format("truetype");
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Gilroy-Light", Arial, Helvetica, sans-serif;
+  background: #354147;
+  color: #ffff;
+}
+
+/*# sourceMappingURL=main.css.map */

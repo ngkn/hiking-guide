@@ -1,0 +1,9 @@
+// This file intended to ONLY add "@use/forward" of others files.
+
+// LIBS
+@use 'libs/normalize';
+// BASICS
+@use 'basics/typography';
+@use 'basics/reset';
+// PAGES
+@use 'pages/app';

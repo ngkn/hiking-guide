@@ -11,15 +11,37 @@ const Header = () => {
         <div className={"burger-menu__line"} />
       </div>
 
-      <div className={"logo-main"}>
+      <div className={"logo"}>
         <Logo />
       </div>
 
-      <div className={"header-account"}>
-        <div className={"header-account__svg"}>
-          <SvgAccount />
-        </div>
-        {/* <span>Account</span> */}
+      <nav className={"nav"}>
+        <ul className={"nav__list"}>
+          <li className={"nav__item"}>
+            <a className="nav__link" href="#">
+              Equipment
+            </a>
+          </li>
+          <li className={"nav__item"}>
+            <a className="nav__link" href="#">
+              About us
+            </a>
+          </li>
+          <li className={"nav__item"}>
+            <a className="nav__link" href="#">
+              Blog
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div className={"account"}>
+        <a href="#" className={"account__link"}>
+          <div className={"account__svg"}>
+            <SvgAccount />
+          </div>
+          <span className={"account__text"}>Account</span>
+        </a>
       </div>
     </header>
   )

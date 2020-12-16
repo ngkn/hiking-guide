@@ -18,7 +18,18 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: "Gilroy-Light", Arial, Helvetica, sans-serif;
+  font-weight: 600;
   background: #354147;
+  color: #ffff;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
   color: #ffff;
 }
 
@@ -31,10 +42,15 @@ body {
 }
 
 .layout {
-  max-width: 1100px;
+  max-width: 1760px;
   margin: 0 auto;
-  padding: 15px;
+  padding: 1rem;
   overflow: hidden;
+}
+@media screen and (min-width: 1024px) {
+  .layout {
+    padding: 2rem 3rem;
+  }
 }
 
 .header {
@@ -44,7 +60,7 @@ body {
   width: 100%;
 }
 
-.logo-main {
+.logo {
   position: relative;
   width: 108px;
   height: 24px;
@@ -62,10 +78,51 @@ body {
   height: 2px;
   background: #ffff;
 }
+.burger-menu:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .burger-menu {
+    display: none;
+  }
+}
 
-.header-account__svg {
+.nav {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .nav {
+    display: block;
+  }
+  .nav__list {
+    display: flex;
+  }
+  .nav__item {
+    margin-right: 2em;
+  }
+  .nav__item:last-of-type {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .account__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 108px;
+  }
+}
+.account__text {
+  display: none;
+}
+@media screen and (min-width: 769px) {
+  .account__text {
+    display: block;
+  }
+}
+.account__svg {
   position: relative;
-  margin-right: 5px;
   width: 30px;
   height: 30px;
 }

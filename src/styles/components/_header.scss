@@ -1,4 +1,5 @@
 @use '../helpers/variables';
+@use '../libs/breakpoints';
 
 .header {
   display: flex;
@@ -7,7 +8,7 @@
   width: 100%;
 }
 
-.logo-main {
+.logo {
   position: relative;
   width: 108px;
   height: 24px;
@@ -25,12 +26,51 @@
     height: 2px;
     background: variables.$white;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
+  @include breakpoints.media(">=tablet", "screen") {
+    display: none;
+  }
 }
 
-.header-account {
+.nav {
+  display: none;
+  @include breakpoints.media(">=tablet", "screen") {
+    display: block;
+
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      margin-right: 2em;
+    }
+
+    &__item:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.account {
+  &__link {
+    @include breakpoints.media(">tablet", "screen") {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 108px; // based to logo's
+    }
+  }
+  &__text {
+    display: none;
+    @include breakpoints.media(">tablet", "screen") {
+      display: block;
+    }
+  }
   &__svg {
     position: relative;
-    margin-right: 5px;
     width: 30px;
     height: 30px;
   }

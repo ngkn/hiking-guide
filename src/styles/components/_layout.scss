@@ -1,6 +1,12 @@
+@use '../libs/breakpoints';
+
 .layout {
-  max-width: 1100px;
+  max-width: 1760px;
   margin: 0 auto;
-  padding: 15px;
+  padding: 1rem;
   overflow: hidden;
+
+  @include breakpoints.media(">=desktop", "screen") {
+    padding: 2rem 3rem;
+  }
 }

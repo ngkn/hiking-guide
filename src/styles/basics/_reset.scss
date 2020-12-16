@@ -10,6 +10,17 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: "Gilroy-Light", Arial, Helvetica, sans-serif;
+  font-weight: 600;
   background: variables.$bg-main-color;
+  color: variables.$text-main-color;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
   color: variables.$text-main-color;
 }

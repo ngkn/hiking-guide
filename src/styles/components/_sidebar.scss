@@ -1,0 +1,46 @@
+@use '../helpers/variables';
+@use '../libs/breakpoints';
+
+.backdrop {
+  @extend %pos-fixed-top-left;
+  width: 100%;
+  height: 100%;
+  background: unquote(variables.$veryLightGrey + "b3");
+
+  @include breakpoints.media(">=tablet", "screen") {
+    display: none;
+  }
+}
+
+.sidebar {
+  @extend %pos-fixed-top-left;
+  width: 75%;
+  height: 100vh;
+  padding: 1rem 0;
+  background: variables.$cinder;
+
+  &__icon-close {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-left: 1rem;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 1rem;
+
+    &:focus {
+      background: variables.$blackPearl;
+    }
+  }
+}
+
+// Placeholders
+%pos-fixed-top-left {
+  position: fixed;
+  left: 0;
+  top: 0;
+}

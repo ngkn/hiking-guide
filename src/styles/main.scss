@@ -1,6 +1,10 @@
 // This file intended to ONLY add "@use/forward" of others files.
 // Files are sorted in a certain order. Be careful when modifying this file.
 
+// This project is made with the approach of putting media queries (MQ) inside
+// class for lisibility. It way cause MQ duplications after compilation.
+// It planned to use a package to Pack same CSS media query.
+
 // 1- LIBS
 @use 'libs/normalize';
 
@@ -12,6 +16,7 @@
 @use 'components/svg';
 @use 'components/layout';
 @use 'components/header';
+@use 'components/sidebar';
 
 // 4- PAGES
 @use 'pages/app';

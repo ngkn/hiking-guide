@@ -20,7 +20,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint './src/**/*.{js,jsx}'",
     "lint:fix": "eslint './src/**/*.{js,jsx}' --fix",
-    "sass": "./dart-sass/sass src/styles/main.scss src/styles/main.css"
+    "sass": "./dart-sass/sass src/styles/main.scss src/styles/main.css --watch"
   },
   "eslintConfig": {
     "extends": [

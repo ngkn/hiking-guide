@@ -45,17 +45,17 @@
 
     &__item {
       margin-right: 2em;
-    }
 
-    &__item:last-of-type {
-      margin-right: 0;
+      &:last-of-type {
+        margin-right: 0;
+      }
     }
   }
 }
 
 .account {
   &__link {
-    @include breakpoints.media(">tablet", "screen") {
+    @include breakpoints.media(">=tablet", "screen") {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -64,7 +64,7 @@
   }
   &__text {
     display: none;
-    @include breakpoints.media(">tablet", "screen") {
+    @include breakpoints.media(">=tablet", "screen") {
       display: block;
     }
   }

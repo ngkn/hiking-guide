@@ -18,6 +18,8 @@
 }
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
   @extend %pos-fixed-top-left;
   width: 75%;
   height: 100vh;
@@ -32,11 +34,19 @@
   }
 
   &__icon-close {
-    position: relative;
+    position: absolute;
     width: 20px;
     height: 20px;
     margin-left: 1rem;
     cursor: pointer;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
   }
 
   &__link {

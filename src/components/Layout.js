@@ -6,12 +6,6 @@ import Footer from "./Footer"
 import PropTypes from "prop-types"
 
 const Layout = ({ children }) => {
-  // const [showSidebar, setShowSidebar] = useState(false)
-
-  // const handleClickSidebar = (open) => {
-  //   setShowSidebar(open)
-  // }
-
   return (
     <div className={"layout"}>
       <Header />

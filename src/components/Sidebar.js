@@ -16,12 +16,12 @@ const Sidebar = ({ showSidebar, closeSidebar }) => {
 
   return (
     <Portal>
-      <div className={classNameBackdrop} />
+      <div className={classNameBackdrop} onClick={handleClickCloseSidebar} />
       <div className={classNameIconClose}>
         <div className="sidebar__icon-close" onClick={handleClickCloseSidebar}>
           <Close />
         </div>
-        <ul>
+        <ul className="sidebar__list">
           {infos.sidebarLinks.map((sidebarLink) => (
             <li key={sidebarLink.title} className="sidebar__link">
               {sidebarLink.title}

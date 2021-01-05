@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
   return (
     <div className={"layout"}>
       <Header />
-      <main>
+      <main className={"layout-main"}>
         {React.Children.map(children, (child) =>
           React.isValidElement(child) ? React.cloneElement(child, {}) : null
         )}

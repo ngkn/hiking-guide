@@ -1,0 +1,41 @@
+@use '../libs/breakpoints';
+@use '../helpers/variables';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  &-logo {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+
+    @include breakpoints.media(">=tablet", "screen") {
+      justify-content: normal;
+    }
+  }
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+  }
+  &-blog {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+  &-more {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+
+  @include breakpoints.media(">=tablet", "screen") {
+    flex-direction: row;
+  }
+}
+
+.copyright {
+  opacity: 50%;
+  flex-grow: 1;
+}

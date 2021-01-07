@@ -3,31 +3,73 @@
 
 .footer {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  max-width: 1462px;
+  margin: 0 auto;
 
-  &-logo {
+  &-title {
+    color: variables.$honeyBees;
+    margin: 0 0 2rem 0;
+  }
+
+  &-logo-text {
+    position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     flex: 1;
+    margin-bottom: 1rem;
 
     @include breakpoints.media(">=tablet", "screen") {
+      align-items: flex-start;
       justify-content: normal;
+      margin-bottom: 0;
     }
   }
+
+  &-text {
+    width: auto;
+    text-align: center;
+
+    @include breakpoints.media(">=tablet", "screen") {
+      width: 299px;
+      text-align: initial;
+    }
+  }
+
+  &-links-container {
+    margin: 0;
+  }
+
   &-list {
     display: flex;
     justify-content: space-between;
     flex: 1;
+    margin: 0;
   }
-  &-blog {
-    display: flex;
-    justify-content: center;
-    flex: 1;
+
+  &-list-blog {
+    margin: 0;
   }
-  &-more {
+
+  &-link {
+    margin-bottom: 1.5rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &-section {
     display: flex;
-    justify-content: center;
-    flex: 1;
+    flex-direction: column;
+    text-align: left;
+
+    @include breakpoints.media(">=tablet", "screen") {
+      flex: 1 1 auto;
+      justify-content: initial;
+    }
   }
 
   @include breakpoints.media(">=tablet", "screen") {
@@ -38,4 +80,9 @@
 .copyright {
   opacity: 50%;
   flex-grow: 1;
+
+  @include breakpoints.media(">=tablet", "screen") {
+    position: absolute;
+    bottom: 0;
+  }
 }

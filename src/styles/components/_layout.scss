@@ -2,11 +2,19 @@
 
 .layout {
   max-width: 1760px;
+  height: 100vh;
   margin: 0 auto;
   padding: 1rem;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
   @include breakpoints.media(">=desktop", "screen") {
     padding: 2rem 3rem;
   }
+}
+
+.layout-main {
+  max-width: 1462px;
+  margin: 0 auto;
+  flex: 1 0 auto;
 }

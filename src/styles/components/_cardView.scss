@@ -1,0 +1,66 @@
+@use '../libs/breakpoints';
+@use '../helpers/variables';
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  &__number {
+    position: absolute;
+    font-size: 5rem;
+    font-weight: lighter;
+    z-index: variables.$cardNumber;
+    opacity: 10%;
+    font-family: "Gilroy-bold";
+
+    @include breakpoints.media(">=tablet", "screen") {
+      font-size: 15rem;
+    }
+  }
+
+  &__description {
+    position: relative;
+    margin-top: 2rem;
+    z-index: variables.$cardDescription;
+  }
+
+  &__tagline-container {
+    display: flex;
+    align-items: center;
+    margin: 1.6rem 0 0 1.1rem;
+    color: variables.$honeyBees;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-family: "Gilroy-bold";
+  }
+
+  &__line {
+    width: 36px;
+    margin-right: 1rem;
+  }
+
+  &__tagline {
+    flex: 2;
+  }
+
+  &__image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    max-width: 480px;
+
+    // object-fit: cover;
+    // object-position: center;
+  }
+}

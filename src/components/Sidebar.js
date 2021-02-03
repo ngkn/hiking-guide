@@ -1,6 +1,6 @@
 import React from "react"
 
-import Close from "./svg/Close"
+import Close from "components/svg/Close"
 import Portal from "components/Portal"
 import infos from "config/infos"
 

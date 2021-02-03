@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef, memo } from "react"
-import Logo from "./svg/Logo"
-import SvgAccount from "./svg/Account"
-import BurgerMenu from "./svg/BurgerMenu"
+import React, { useState } from "react"
+import Logo from "components/svg/Logo"
+import SvgAccount from "components/svg/Account"
+
+import BurgerMenu from "components/svg/BurgerMenu"
 
 // Sidebar is here to avoid the re-render of Layout's elements each time we open/close it
-import Sidebar from "../components/Sidebar"
+import Sidebar from "components/Sidebar"
 
 const Header = () => {
   const [showSidebar, setShowSidebar] = useState(false)

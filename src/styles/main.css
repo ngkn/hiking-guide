@@ -19,6 +19,7 @@ body {
   min-height: 100vh;
   font-family: "Gilroy-Light", Arial, Helvetica, sans-serif;
   font-weight: 600;
+  line-height: 1.32;
   background: #354147;
   color: #ffff;
 }
@@ -56,8 +57,6 @@ a {
 }
 
 .layout-main {
-  max-width: 1462px;
-  margin: 0 auto;
   flex: 1 0 auto;
 }
 
@@ -139,6 +138,7 @@ a {
   width: 100%;
   height: 100%;
   background: #c9c9c9b3;
+  z-index: 999;
 }
 .backdrop--open {
   display: block;
@@ -158,6 +158,7 @@ a {
   background: #222d32;
   transform: translate3d(-100%, 0, 0);
   transition: transform 0.5s ease;
+  z-index: 999;
 }
 .sidebar--open {
   transform: translate3d(0, 0, 0);
@@ -210,13 +211,13 @@ a {
   justify-content: center;
   align-items: center;
   flex: 1;
-  margin-bottom: 1rem;
+  margin-top: 3rem;
 }
 @media screen and (min-width: 768px) {
   .footer-logo-text {
     align-items: flex-start;
     justify-content: normal;
-    margin-bottom: 0;
+    margin-top: 0;
   }
 }
 .footer-text {
@@ -234,7 +235,6 @@ a {
 }
 .footer-list {
   display: flex;
-  justify-content: space-between;
   flex: 1;
   margin: 0;
 }
@@ -251,10 +251,10 @@ a {
   display: flex;
   flex-direction: column;
   text-align: left;
+  flex: 1 1 auto;
 }
 @media screen and (min-width: 768px) {
   .footer-section {
-    flex: 1 1 auto;
     justify-content: initial;
   }
 }
@@ -273,6 +273,226 @@ a {
     position: absolute;
     bottom: 0;
   }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 1462px;
+  margin-bottom: 2rem;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8rem;
+  }
+  .card--even {
+    flex-direction: row-reverse;
+  }
+}
+.card__number {
+  position: absolute;
+  top: 0;
+  font-size: 5rem;
+  font-weight: lighter;
+  z-index: 1;
+  opacity: 0.1;
+  font-family: "Gilroy-bold";
+}
+@media screen and (min-width: 1340px) {
+  .card__number--even {
+    top: -7rem;
+    left: -7rem;
+  }
+}
+@media screen and (min-width: 1340px) {
+  .card__number--odd {
+    top: -7rem;
+    left: -2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card__number {
+    top: -2rem;
+    font-size: 8rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card__number {
+    top: -7rem;
+    font-size: 15rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card__container {
+    position: relative;
+    flex: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+.card__container--even {
+  justify-content: flex-end;
+}
+.card__description {
+  margin-top: 2rem;
+  max-width: 632px;
+  z-index: 2;
+}
+@media screen and (min-width: 768px) {
+  .card__description {
+    padding-right: 2rem;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card__description {
+    position: relative;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card__description {
+    padding-left: 1rem;
+    padding-right: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card__description--odd {
+    box-sizing: content-box;
+    padding-left: 7rem;
+    padding-right: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card__description--even {
+    padding-right: 0;
+    padding-left: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card__description--even {
+    padding-right: 0;
+  }
+}
+.card__line {
+  position: absolute;
+  top: 43px;
+  left: 49px;
+  width: 40px;
+  margin-right: 1rem;
+  border: 1px solid#fbd784;
+}
+@media screen and (min-width: 768px) {
+  .card__line--even {
+    left: 82px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card__line--even {
+    left: 33px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card__line--odd {
+    left: 112px;
+  }
+}
+.card__tagline {
+  color: #fbd784;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-family: "Gilroy-bold";
+  position: absolute;
+  top: 28px;
+  left: 103px;
+  flex: 2;
+}
+@media screen and (min-width: 768px) {
+  .card__tagline--even {
+    left: 138px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card__tagline--even {
+    left: 93px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card__tagline--odd {
+    left: 173px;
+  }
+}
+.card__text {
+  font-size: 1.125rem;
+  padding-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .card__text {
+    padding-bottom: 0;
+  }
+}
+.card__title {
+  font-family: "Chronicle Display";
+  font-weight: normal;
+  font-size: 2rem;
+  margin-top: 6rem;
+}
+@media screen and (min-width: 768px) {
+  .card__title {
+    flex: 1;
+    justify-content: flex-end;
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card__title {
+    flex: 1;
+    justify-content: flex-end;
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card__title {
+    padding-right: 4rem;
+  }
+}
+.card__image-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .card__image-container {
+    flex: 1;
+    justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card__image-container {
+    flex: initial;
+  }
+}
+.card__image {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1462px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=main.css.map */

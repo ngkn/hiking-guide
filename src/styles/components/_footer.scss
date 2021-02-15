@@ -19,12 +19,12 @@
     justify-content: center;
     align-items: center;
     flex: 1;
-    margin-bottom: 1rem;
+    margin-top: 3rem;
 
     @include breakpoints.media(">=tablet", "screen") {
       align-items: flex-start;
       justify-content: normal;
-      margin-bottom: 0;
+      margin-top: 0;
     }
   }
 
@@ -44,7 +44,6 @@
 
   &-list {
     display: flex;
-    justify-content: space-between;
     flex: 1;
     margin: 0;
   }
@@ -65,9 +64,9 @@
     display: flex;
     flex-direction: column;
     text-align: left;
+    flex: 1 1 auto;
 
     @include breakpoints.media(">=tablet", "screen") {
-      flex: 1 1 auto;
       justify-content: initial;
     }
   }

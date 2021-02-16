@@ -5,6 +5,20 @@ import hikerWalkingMedium1284 from "images/optimizeImages/climb-walking-medium@3
 import hikerWalkingLarge522 from "images/optimizeImages/climb-walking-large.jpg"
 import hikerWalkingLarge1044 from "images/optimizeImages/climb-walking-large@3x.jpg"
 
+import hikerContemplationSmall540 from "images/optimizeImages/climb-contemplation-small.jpg"
+import hikerContemplationSmall920 from "images/optimizeImages/climb-contemplation-small@3x.jpg"
+import hikerContemplationMedium856 from "images/optimizeImages/climb-contemplation-medium.jpg"
+import hikerContemplationMedium1284 from "images/optimizeImages/climb-contemplation-medium@3x.jpg"
+import hikerContemplationLarge522 from "images/optimizeImages/climb-contemplation-large.jpg"
+import hikerContemplationLarge1044 from "images/optimizeImages/climb-contemplation-large@3x.jpg"
+
+import hikerCompassSmall540 from "images/optimizeImages/climb-compass-small.jpg"
+import hikerCompassSmall920 from "images/optimizeImages/climb-compass-small@3x.jpg"
+import hikerCompassMedium856 from "images/optimizeImages/climb-compass-medium.jpg"
+import hikerCompassMedium1284 from "images/optimizeImages/climb-compass-medium@3x.jpg"
+import hikerCompassLarge522 from "images/optimizeImages/climb-compass-large.jpg"
+import hikerCompassLarge1044 from "images/optimizeImages/climb-compass-large@3x.jpg"
+
 export default {
   sidebarLinks: [
     {
@@ -86,7 +100,7 @@ export default {
             sizes: "(min-width: 1024px) 50vw , 100vw",
           },
         },
-        src: hikerWalkingSmall540,
+        src: hikerWalkingMedium856,
       },
       alt: "Hiker walking on a mountain",
       link: "#",
@@ -101,24 +115,24 @@ export default {
         small: {
           source: {
             media: "(max-width: 767px)",
-            srcset: `${hikerWalkingSmall540} 540w, ${hikerWalkingSmall920} 920w`,
+            srcset: `${hikerContemplationSmall540} 540w, ${hikerContemplationSmall920} 920w`,
           },
         },
         medium: {
           source: {
             media: "(min-width: 768px) and (max-width: 1023px)",
-            srcset: `${hikerWalkingMedium856} 900w,  ${hikerWalkingMedium1284} 1284w`,
+            srcset: `${hikerContemplationMedium856} 900w,  ${hikerContemplationMedium1284} 1284w`,
             sizes: "(min-width: 768px) 50vw , 100vw",
           },
         },
         large: {
           source: {
             media: "(min-width: 1024px)",
-            srcset: `${hikerWalkingLarge522} 522w,  ${hikerWalkingLarge1044} 1044w`,
+            srcset: `${hikerContemplationLarge522} 522w,  ${hikerContemplationLarge1044} 1044w`,
             sizes: "(min-width: 1024px) 50vw , 100vw",
           },
         },
-        src: hikerWalkingSmall540,
+        src: hikerContemplationMedium856,
       },
       alt: "Hiker standing at the top of a mountain",
       link: "#",
@@ -133,24 +147,24 @@ export default {
         small: {
           source: {
             media: "(max-width: 767px)",
-            srcset: `${hikerWalkingSmall540} 540w, ${hikerWalkingSmall920} 920w`,
+            srcset: `${hikerCompassSmall540} 540w, ${hikerCompassSmall920} 920w`,
           },
         },
         medium: {
           source: {
             media: "(min-width: 768px) and (max-width: 1023px)",
-            srcset: `${hikerWalkingMedium856} 900w,  ${hikerWalkingMedium1284} 1284w`,
+            srcset: `${hikerCompassMedium856} 900w,  ${hikerCompassMedium1284} 1284w`,
             sizes: "(min-width: 768px) 50vw , 100vw",
           },
         },
         large: {
           source: {
             media: "(min-width: 1024px)",
-            srcset: `${hikerWalkingLarge522} 522w,  ${hikerWalkingLarge1044} 1044w`,
+            srcset: `${hikerCompassLarge522} 522w,  ${hikerCompassLarge1044} 1044w`,
             sizes: "(min-width: 1024px) 50vw , 100vw",
           },
         },
-        src: hikerWalkingSmall540,
+        src: hikerCompassMedium856,
       },
       alt: "Hiker showing a compass above a mountain",
       link: "#",

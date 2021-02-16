@@ -1,0 +1,212 @@
+@use '../libs/breakpoints';
+@use '../helpers/variables';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 1462px;
+  margin-bottom: 2rem;
+  position: relative;
+
+  @include breakpoints.media(">=tablet", "screen") {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8rem;
+
+    &--even {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__number {
+    position: absolute;
+    top: 0;
+    font-size: 5rem;
+    font-weight: lighter;
+    z-index: variables.$cardNumber;
+    opacity: 0.1;
+    font-family: "Gilroy-bold";
+
+    &--even {
+      @include breakpoints.media(">=largeDesktop-number", "screen") {
+        top: -7rem;
+        left: -7rem;
+      }
+    }
+
+    &--odd {
+      @include breakpoints.media(">=largeDesktop-number", "screen") {
+        top: -7rem;
+        left: -2rem;
+      }
+    }
+
+    @include breakpoints.media(">=tablet", "screen") {
+      top: -2rem;
+      font-size: 8rem;
+    }
+    @include breakpoints.media(">=desktop", "screen") {
+      top: -7rem;
+      font-size: 15rem;
+    }
+  }
+
+  &__container {
+    @include breakpoints.media(">=tablet", "screen") {
+      position: relative;
+      flex: 1;
+    }
+
+    @include breakpoints.media(">=desktop", "screen") {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    &--even {
+      justify-content: flex-end;
+    }
+  }
+
+  &__description {
+    margin-top: 2rem;
+    max-width: 632px;
+    z-index: variables.$cardDescription;
+
+    @include breakpoints.media(">=tablet", "screen") {
+      padding-right: 2rem;
+      margin-top: 0;
+    }
+    @include breakpoints.media(">=desktop", "screen") {
+      position: relative;
+    }
+
+    @include breakpoints.media(">=largeDesktop", "screen") {
+      padding-left: 1rem;
+      padding-right: 0;
+    }
+
+    &--odd {
+      @include breakpoints.media(">=largeDesktop", "screen") {
+        box-sizing: content-box;
+        padding-left: 7rem;
+        padding-right: 2rem;
+      }
+    }
+
+    &--even {
+      @include breakpoints.media(">=tablet", "screen") {
+        padding-right: 0;
+        padding-left: 2rem;
+      }
+      @include breakpoints.media(">=desktop", "screen") {
+        padding-right: 0;
+      }
+    }
+  }
+
+  &__line {
+    position: absolute;
+    top: 43px;
+    left: 49px;
+    width: 40px;
+    margin-right: 1rem;
+    border: unquote("1px solid" + variables.$honeyBees);
+
+    &--even {
+      @include breakpoints.media(">=tablet", "screen") {
+        left: 82px;
+      }
+      @include breakpoints.media(">=largeDesktop", "screen") {
+        left: 33px;
+      }
+    }
+    &--odd {
+      @include breakpoints.media(">=largeDesktop", "screen") {
+        left: 112px;
+      }
+    }
+  }
+
+  &__tagline {
+    color: variables.$honeyBees;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-family: "Gilroy-bold";
+    position: absolute;
+    top: 28px;
+    left: 103px;
+    flex: 2;
+
+    &--even {
+      @include breakpoints.media(">=tablet", "screen") {
+        left: 138px;
+      }
+      @include breakpoints.media(">=largeDesktop", "screen") {
+        left: 93px;
+      }
+    }
+    &--odd {
+      @include breakpoints.media(">=largeDesktop", "screen") {
+        left: 173px;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 1.125rem;
+    padding-bottom: 2rem;
+
+    @include breakpoints.media(">=tablet", "screen") {
+      padding-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-family: "Chronicle Display";
+    font-weight: normal;
+    font-size: 2rem;
+
+    margin-top: 6rem;
+
+    @include breakpoints.media(">=tablet", "screen") {
+      flex: 1;
+      justify-content: flex-end;
+      font-size: 3rem;
+    }
+    @include breakpoints.media(">=desktop", "screen") {
+      flex: 1;
+      justify-content: flex-end;
+      font-size: 4rem;
+    }
+
+    @include breakpoints.media(">=largeDesktop", "screen") {
+      padding-right: 4rem;
+    }
+  }
+
+  &__image-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    @include breakpoints.media(">=tablet", "screen") {
+      flex: 1;
+      justify-content: flex-end;
+    }
+
+    @include breakpoints.media(">=desktop", "screen") {
+      flex: initial;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    // height: auto;
+  }
+}

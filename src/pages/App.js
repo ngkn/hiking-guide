@@ -5,7 +5,6 @@ import CardView from "../components/CardView"
 
 import infos from "config/infos"
 
-
 const App = () => {
   return (
     <Layout>

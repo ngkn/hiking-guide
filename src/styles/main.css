@@ -58,6 +58,7 @@ a {
 
 .layout-main {
   flex: 1 0 auto;
+  background: #0b1d26;
 }
 
 .header {
@@ -434,12 +435,30 @@ a {
 }
 .card__text {
   font-size: 1.125rem;
-  padding-bottom: 2rem;
 }
 @media screen and (min-width: 768px) {
   .card__text {
     padding-bottom: 0;
   }
+}
+.card__link-container {
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: max-content;
+}
+.card__link {
+  display: flex;
+  align-items: center;
+  color: #fbd784;
+  transition: all 200ms ease;
+}
+.card__link:hover {
+  transform: translate(2px, 0px);
+}
+.card__link-text {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .card__title {
   font-family: "Chronicle Display";

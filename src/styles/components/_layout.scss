@@ -1,4 +1,5 @@
 @use '../libs/breakpoints';
+@use '../helpers/variables';
 
 .layout {
   max-width: 1760px;
@@ -15,4 +16,5 @@
 
 .layout-main {
   flex: 1 0 auto;
+  background: variables.$bg-layout-main;
 }

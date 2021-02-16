@@ -158,11 +158,34 @@
 
   &__text {
     font-size: 1.125rem;
-    padding-bottom: 2rem;
 
     @include breakpoints.media(">=tablet", "screen") {
       padding-bottom: 0;
     }
+  }
+
+  &__link-container {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: max-content;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: #fbd784;
+
+    transition: all 200ms ease;
+
+    &:hover {
+      transform: translate(2px, 0px);
+    }
+  }
+
+  &__link-text {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 
   &__title {

@@ -1,6 +1,8 @@
 import * as React from "react"
 
-function Arrow({ color }) {
+import PropTypes from "prop-types"
+
+const Arrow = ({ color }) => {
   return (
     <svg
       width={24}
@@ -18,3 +20,7 @@ function Arrow({ color }) {
 }
 
 export default Arrow
+
+Arrow.propTypes = {
+  color: PropTypes.string,
+}

@@ -19,42 +19,55 @@ const Header = () => {
   }
 
   return (
-    <header className="header">
-      <Sidebar showSidebar={showSidebar} closeSidebar={closeSidebar} />
-      <div className="burger-menu" onClick={handleClickOpenSidebar}>
-        <i className="burger-menu__icon">
-          <BurgerMenu />
+    <header>
+      <div className="vg" />
+      <div className="gradient" />
+      <div className="menu">
+        <Sidebar showSidebar={showSidebar} closeSidebar={closeSidebar} />
+        <div className="burger-menu" onClick={handleClickOpenSidebar}>
+          <i className="burger-menu__icon">
+            <BurgerMenu />
+          </i>
+        </div>
+        <i className="logo">
+          <Logo />
         </i>
+        <nav className="nav">
+          <ul className="nav__list">
+            <li className="nav__item">
+              <a className="nav__link" href="#">
+                Equipment
+              </a>
+            </li>
+            <li className="nav__item">
+              <a className="nav__link" href="#">
+                About us
+              </a>
+            </li>
+            <li className="nav__item">
+              <a className="nav__link" href="#">
+                Blog
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div className="account">
+          <a href="#" className="account__link">
+            <div className="account__svg">
+              <SvgAccount />
+            </div>
+            <span className="account__text">Account</span>
+          </a>
+        </div>
       </div>
-      <i className="logo">
-        <Logo />
-      </i>
-      <nav className="nav">
-        <ul className="nav__list">
-          <li className="nav__item">
-            <a className="nav__link" href="#">
-              Equipment
-            </a>
-          </li>
-          <li className="nav__item">
-            <a className="nav__link" href="#">
-              About us
-            </a>
-          </li>
-          <li className="nav__item">
-            <a className="nav__link" href="#">
-              Blog
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div className="account">
-        <a href="#" className="account__link">
-          <div className="account__svg">
-            <SvgAccount />
-          </div>
-          <span className="account__text">Account</span>
-        </a>
+      <div className="titles-wrapper">
+        <div className="titles">
+          <div className="titles__guide">A Hiking guide</div>
+          <h1 className="titles__main">
+            Be prepared for the Mountains and beyond!
+          </h1>
+          <div className="titles__scroll">scroll down</div>
+        </div>
       </div>
     </header>
   )

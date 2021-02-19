@@ -9,7 +9,13 @@ const App = () => {
   useEffect(() => {
     const titlesClassname = document.querySelector(".titles")
     let opacity
-    titlesClassname.style.opacity = 1 - window.scrollY / 600
+    titlesClassname.style.opacity = 1 - window.pageYOffset / 600
+
+    //HG translate
+    const hgClassname = document.querySelector(".hg")
+
+    //MG translate
+    const mgClassname = document.querySelector(".mg")
 
     window.addEventListener("scroll", () => {
       opacity = window
@@ -20,8 +26,22 @@ const App = () => {
         console.log("superieur à 0  :>> ", opacity)
         titlesClassname.style.opacity = 0
       } else {
-        titlesClassname.style.opacity = 1 - window.scrollY / 600
+        titlesClassname.style.opacity = 1 - window.pageYOffset / 600
       }
+
+      // HG
+      hgClassname.style.transform = `translate3d(0, -${
+        // window.pageYOffset / 15
+        window.pageYOffset / 35
+      }%, 0)`
+
+      // MG
+      mgClassname.style.transform = `translate3d(0, -${
+        // window.pageYOffset / 35
+        window.pageYOffset / 75
+      }%, 0)`
+
+      console.log(window.pageYOffset / 6)
     })
   }, [])
 

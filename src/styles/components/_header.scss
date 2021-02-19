@@ -4,10 +4,19 @@
 header {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 800px;
+
+  @include breakpoints.media(">=tablet", "screen") {
+    height: 1024px;
+  }
+
+  @include breakpoints.media(">=desktop", "screen") {
+    height: 100vh;
+  }
 }
 
 .menu {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,40 +26,28 @@ header {
 
 .titles-wrapper {
   position: relative;
-  // height: 100vh; // check later
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  // @include breakpoints.media(">=tablet", "screen") {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  // }
 }
 
 .titles {
   position: fixed;
   padding: 0 1rem;
-
   max-width: 370px;
+  top: 10rem;
+  opacity: 1; // handler via JS
 
   @include breakpoints.media(">=largePhone", "screen") {
     max-width: 538px;
   }
 
-  top: 20%;
-
   @include breakpoints.media(">=tablet", "screen") {
-    top: 20%;
+    top: 20rem;
     transform: translateY(-50%);
     margin: 0 50px;
-
-    max-width: 790px;
+    max-width: 652px;
   }
-
-  opacity: 1; // handler via JS
 
   &__guide {
     font-size: 1.125rem;
@@ -68,7 +65,8 @@ header {
     }
 
     @include breakpoints.media(">=tablet", "screen") {
-      font-size: 4.688rem;
+      // font-size: 4.688rem;
+      font-size: 3.688rem;
     }
   }
 
@@ -144,6 +142,26 @@ header {
   }
 }
 
+.gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+
+  background: linear-gradient(
+    rgba(255, 0, 0, 0),
+    50%,
+    variables.$bg-layout-main
+  );
+
+  z-index: 15;
+
+  @include breakpoints.media(">=desktop", "screen") {
+    display: none;
+  }
+}
+
 .vg {
   position: absolute;
   width: 100%;
@@ -154,21 +172,106 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
+  z-index: 15;
 
-  z-index: 1;
+  @include breakpoints.media(">=tablet", "screen") {
+    background: url("images/optimizeImages/VG-medium.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 400px;
+  }
+
+  @include breakpoints.media(">=desktop", "screen") {
+    background: url("images/optimizeImages/VG-large.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 100%;
+
+    bottom: -60%;
+  }
 }
 
-.gradient {
+.hg {
   position: absolute;
-  bottom: 0;
-  z-index: 2;
-  left: 0;
   width: 100%;
-  height: 150px;
+  height: 800px;
+  left: 0;
+  top: 0;
+  background: url("images/optimizeImages/HG-small.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
 
-  background: linear-gradient(
-    rgba(255, 0, 0, 0),
-    50%,
-    variables.$bg-layout-main
+  @include breakpoints.media(">=tablet", "screen") {
+    background: url("images/optimizeImages/HG-medium.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+
+    height: 840px;
+  }
+
+  @include breakpoints.media(">=desktop", "screen") {
+    background: url("images/optimizeImages/HG-large.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70%;
+  }
+}
+
+.mg {
+  position: absolute;
+  width: 100%;
+  height: 570px;
+  left: 0;
+  top: 48%;
+  background: url("images/optimizeImages/MG-small.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+  @include breakpoints.media(">=tablet", "screen") {
+    background: url("images/optimizeImages/MG-medium.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+    height: 760px;
+    top: 47%;
+  }
+
+  @include breakpoints.media(">=desktop", "screen") {
+    background: url("images/optimizeImages/MG-large@3x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 100%;
+    top: 40%;
+  }
+}
+
+.bgs-images {
+  position: absolute;
+  width: 100%;
+  height: 800px;
+
+  @include breakpoints.media(">=tablet", "screen") {
+    height: 1024px;
+  }
+  @include breakpoints.media(">=desktop", "screen") {
+    height: 100vh;
+  }
+}
+
+.gradient-bgs {
+  position: absolute;
+  background-image: linear-gradient(
+    135deg,
+    variables.$darkBlue,
+    transparent 87%
   );
+  width: inherit;
+  height: inherit;
 }

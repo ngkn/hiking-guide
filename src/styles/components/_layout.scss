@@ -3,7 +3,7 @@
 
 .layout {
   position: relative;
-  max-width: 1760px;
+  max-width: 1920px;
   min-height: 100vh;
   margin: 0 auto;
   // padding: 1rem;
@@ -22,6 +22,11 @@
   position: relative;
   flex: 1 0 auto;
   padding: 0 1rem;
-
   background: variables.$bg-layout-main;
+
+  @include breakpoints.media(">=desktop", "screen") {
+    padding-top: 12.5rem;
+    z-index: 15;
+    background: none;
+  }
 }

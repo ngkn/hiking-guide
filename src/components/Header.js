@@ -20,7 +20,13 @@ const Header = () => {
 
   return (
     <header>
+      <div className="bgs-images">
+        <div className="hg" />
+        <div className="mg" />
+        <div className="gradient-bgs" />
+      </div>
       <div className="vg" />
+
       <div className="gradient" />
       <div className="menu">
         <Sidebar showSidebar={showSidebar} closeSidebar={closeSidebar} />

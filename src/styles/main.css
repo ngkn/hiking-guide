@@ -44,7 +44,7 @@ a {
 
 .layout {
   position: relative;
-  max-width: 1760px;
+  max-width: 1920px;
   min-height: 100vh;
   margin: 0 auto;
   display: flex;
@@ -58,14 +58,32 @@ a {
   padding: 0 1rem;
   background: #0b1d26;
 }
+@media screen and (min-width: 1024px) {
+  .layout-main {
+    padding-top: 12.5rem;
+    z-index: 15;
+    background: none;
+  }
+}
 
 header {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 800px;
+}
+@media screen and (min-width: 768px) {
+  header {
+    height: 1024px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    height: 100vh;
+  }
 }
 
 .menu {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,15 +102,20 @@ header {
   position: fixed;
   padding: 0 1rem;
   max-width: 370px;
-  top: 20%;
+  top: 10rem;
   opacity: 1;
+}
+@media screen and (min-width: 600px) {
+  .titles {
+    max-width: 538px;
+  }
 }
 @media screen and (min-width: 768px) {
   .titles {
-    top: 20%;
+    top: 20rem;
     transform: translateY(-50%);
     margin: 0 50px;
-    max-width: 790px;
+    max-width: 652px;
   }
 }
 .titles__guide {
@@ -105,9 +128,14 @@ header {
   font-weight: 600;
   text-transform: capitalize;
 }
+@media screen and (min-width: 600px) {
+  .titles__main {
+    font-size: 3rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .titles__main {
-    font-size: 4.688rem;
+    font-size: 3.688rem;
   }
 }
 .titles__scroll {
@@ -180,6 +208,21 @@ header {
   height: 30px;
 }
 
+.gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(rgba(255, 0, 0, 0), 50%, #0b1d26);
+  z-index: 15;
+}
+@media screen and (min-width: 1024px) {
+  .gradient {
+    display: none;
+  }
+}
+
 .vg {
   position: absolute;
   width: 100%;
@@ -190,17 +233,110 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  z-index: 1;
+  z-index: 15;
+}
+@media screen and (min-width: 768px) {
+  .vg {
+    background: url("images/optimizeImages/VG-medium.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .vg {
+    background: url("images/optimizeImages/VG-large.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 100%;
+    bottom: -60%;
+  }
 }
 
-.gradient {
+.hg {
   position: absolute;
-  bottom: 0;
-  z-index: 2;
-  left: 0;
   width: 100%;
-  height: 150px;
-  background: linear-gradient(rgba(255, 0, 0, 0), 50%, #0b1d26);
+  height: 800px;
+  left: 0;
+  top: 0;
+  background: url("images/optimizeImages/HG-small.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+@media screen and (min-width: 768px) {
+  .hg {
+    background: url("images/optimizeImages/HG-medium.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    height: 840px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hg {
+    background: url("images/optimizeImages/HG-large.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70%;
+  }
+}
+
+.mg {
+  position: absolute;
+  width: 100%;
+  height: 570px;
+  left: 0;
+  top: 48%;
+  background: url("images/optimizeImages/MG-small.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+@media screen and (min-width: 768px) {
+  .mg {
+    background: url("images/optimizeImages/MG-medium.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 760px;
+    top: 47%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .mg {
+    background: url("images/optimizeImages/MG-large@3x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 100%;
+    top: 40%;
+  }
+}
+
+.bgs-images {
+  position: absolute;
+  width: 100%;
+  height: 800px;
+}
+@media screen and (min-width: 768px) {
+  .bgs-images {
+    height: 1024px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .bgs-images {
+    height: 100vh;
+  }
+}
+
+.gradient-bgs {
+  position: absolute;
+  background-image: linear-gradient(135deg, #0b1d26, transparent 87%);
+  width: inherit;
+  height: inherit;
 }
 
 .backdrop {

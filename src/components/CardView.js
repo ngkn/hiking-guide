@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Arrow from "./svg/Arrow"
 
 const CardView = ({ card }) => {
   const isOdd = !!(Number(card.number) % 2) // Determine odd of a card to apply it specifics css properties
@@ -30,6 +31,14 @@ const CardView = ({ card }) => {
           </h3>
           <h2 className="card__title">{card.title}</h2>
           <div className="card__text">{card.text}</div>
+          <div className="card__link-container">
+            <a className="card__link" href={card.link}>
+              <div className="card__link-text">{"Read more"}</div>
+              <div className="card__link-icon">
+                <Arrow color={"#fbd784"} />
+              </div>
+            </a>
+          </div>
         </div>
       </div>
       <div className="card__image-container">

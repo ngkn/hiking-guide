@@ -43,28 +43,103 @@ a {
 }
 
 .layout {
-  max-width: 1760px;
-  height: 100vh;
+  position: relative;
+  max-width: 1920px;
+  min-height: 100vh;
   margin: 0 auto;
-  padding: 1rem;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  background: #0b1d26;
+}
+.layout-main {
+  position: relative;
+  flex: 1 0 auto;
+  padding: 0 1rem;
+  background: #0b1d26;
 }
 @media screen and (min-width: 1024px) {
-  .layout {
-    padding: 2rem 3rem;
+  .layout-main {
+    padding-top: 12.5rem;
+    z-index: 15;
+    background: none;
   }
 }
 
-.layout-main {
-  flex: 1 0 auto;
+header {
+  position: relative;
+  width: 100%;
+  height: 800px;
+}
+@media screen and (min-width: 768px) {
+  header {
+    height: 1024px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    height: 100vh;
+  }
 }
 
-.header {
+.menu {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 1rem;
+}
+
+.titles-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titles {
+  position: fixed;
+  padding: 0 1rem;
+  max-width: 370px;
+  top: 10rem;
+  opacity: 1;
+}
+@media screen and (min-width: 600px) {
+  .titles {
+    max-width: 538px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .titles {
+    top: 20rem;
+    transform: translateY(-50%);
+    margin: 0 50px;
+    max-width: 652px;
+  }
+}
+.titles__guide {
+  font-size: 1.125rem;
+}
+.titles__main {
+  font-family: "Chronicle Display";
+  font-size: 2rem;
+  line-height: 120%;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+@media screen and (min-width: 600px) {
+  .titles__main {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .titles__main {
+    font-size: 3.688rem;
+  }
+}
+.titles__scroll {
+  font-size: 1.125rem;
 }
 
 .logo {
@@ -133,6 +208,137 @@ a {
   height: 30px;
 }
 
+.gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(rgba(255, 0, 0, 0), 50%, #0b1d26);
+  z-index: 15;
+}
+@media screen and (min-width: 1024px) {
+  .gradient {
+    display: none;
+  }
+}
+
+.vg {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  left: 0;
+  bottom: 0;
+  background: url("images/optimizeImages/VG-small.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  z-index: 15;
+}
+@media screen and (min-width: 768px) {
+  .vg {
+    background: url("images/optimizeImages/VG-medium.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .vg {
+    background: url("images/optimizeImages/VG-large.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 100%;
+    bottom: -60%;
+  }
+}
+
+.hg {
+  position: absolute;
+  width: 100%;
+  height: 800px;
+  left: 0;
+  top: 0;
+  background: url("images/optimizeImages/HG-small.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+@media screen and (min-width: 768px) {
+  .hg {
+    background: url("images/optimizeImages/HG-medium.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    height: 840px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hg {
+    background: url("images/optimizeImages/HG-large.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70%;
+  }
+}
+
+.mg {
+  position: absolute;
+  width: 100%;
+  height: 570px;
+  left: 0;
+  top: 48%;
+  background: url("images/optimizeImages/MG-small.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+@media screen and (min-width: 768px) {
+  .mg {
+    background: url("images/optimizeImages/MG-medium.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 760px;
+    top: 47%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .mg {
+    background: url("images/optimizeImages/MG-large@3x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 100%;
+    top: 40%;
+  }
+}
+
+.bgs-images {
+  position: absolute;
+  width: 100%;
+  height: 800px;
+}
+@media screen and (min-width: 768px) {
+  .bgs-images {
+    height: 1024px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .bgs-images {
+    height: 100vh;
+  }
+}
+
+.gradient-bgs {
+  position: absolute;
+  background-image: linear-gradient(135deg, #0b1d26, transparent 87%);
+  width: inherit;
+  height: inherit;
+}
+
 .backdrop {
   display: none;
   width: 100%;
@@ -199,6 +405,7 @@ a {
   flex-direction: column-reverse;
   max-width: 1462px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 .footer-title {
   color: #fbd784;
@@ -434,12 +641,30 @@ a {
 }
 .card__text {
   font-size: 1.125rem;
-  padding-bottom: 2rem;
 }
 @media screen and (min-width: 768px) {
   .card__text {
     padding-bottom: 0;
   }
+}
+.card__link-container {
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: max-content;
+}
+.card__link {
+  display: flex;
+  align-items: center;
+  color: #fbd784;
+  transition: all 200ms ease;
+}
+.card__link:hover {
+  transform: translate(2px, 0px);
+}
+.card__link-text {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .card__title {
   font-family: "Chronicle Display";
@@ -489,6 +714,7 @@ a {
 }
 
 .cards-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   max-width: 1462px;

@@ -6,6 +6,7 @@ import BurgerMenu from "components/svg/BurgerMenu"
 
 // Sidebar is here to avoid the re-render of Layout's elements each time we open/close it
 import Sidebar from "components/Sidebar"
+import Arrow from "./svg/Arrow"
 
 const Header = () => {
   const [showSidebar, setShowSidebar] = useState(false)
@@ -68,11 +69,19 @@ const Header = () => {
       </div>
       <div className="titles-wrapper">
         <div className="titles">
-          <div className="titles__guide">A Hiking guide</div>
+          <div className="titles__guide">
+            <hr className={`titles__line `} />
+            <div>A Hiking guide</div>
+          </div>
           <h1 className="titles__main">
             Be prepared for the Mountains and beyond!
           </h1>
-          <div className="titles__scroll">scroll down</div>
+          <div className="titles__scroll">
+            <div className="titles__scroll-text">scroll down</div>
+            <div className="titles__svg">
+              <Arrow color={"white"} />
+            </div>
+          </div>
         </div>
       </div>
     </header>

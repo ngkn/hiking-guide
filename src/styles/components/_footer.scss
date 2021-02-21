@@ -6,7 +6,14 @@
   flex-direction: column-reverse;
   max-width: 1462px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 4rem 1rem;
+
+  @include breakpoints.media(">=desktop", "screen") {
+    padding: 5rem 1rem 5rem 1rem;
+  }
+  // @include breakpoints.media(">=largeDesktop", "screen") {
+  //   padding: 1rem 0 5rem 1rem;
+  // }
 
   &-title {
     color: variables.$honeyBees;
@@ -26,6 +33,11 @@
       align-items: flex-start;
       justify-content: normal;
       margin-top: 0;
+    }
+
+    @include breakpoints.media(">=desktop", "screen") {
+      flex: auto;
+      width: 100%;
     }
   }
 
@@ -47,6 +59,16 @@
     display: flex;
     flex: 1;
     margin: 0;
+
+    @include breakpoints.media(">=desktop", "screen") {
+      flex: auto;
+      min-width: 500px;
+      justify-content: space-between;
+    }
+
+    @include breakpoints.media(">=desktop", "screen") {
+      min-width: 486px;
+    }
   }
 
   &-list-blog {
@@ -70,6 +92,10 @@
     @include breakpoints.media(">=tablet", "screen") {
       justify-content: initial;
     }
+
+    @include breakpoints.media(">=desktop", "screen") {
+      flex: 0 0 auto;
+    }
   }
 
   @include breakpoints.media(">=tablet", "screen") {
@@ -85,4 +111,8 @@
     position: absolute;
     bottom: 0;
   }
+}
+
+.author-name {
+  text-decoration: underline;
 }

@@ -23,7 +23,6 @@ const App = () => {
         .getPropertyValue("opacity")
 
       if (opacity === 0 || opacity < 0) {
-        console.log("superieur à 0  :>> ", opacity)
         titlesClassname.style.opacity = 0
       } else {
         titlesClassname.style.opacity = 1 - window.pageYOffset / 600
@@ -40,8 +39,6 @@ const App = () => {
         // window.pageYOffset / 35
         window.pageYOffset / 75
       }%, 0)`
-
-      console.log(window.pageYOffset / 6)
     })
   }, [])
 

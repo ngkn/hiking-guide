@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/hiking-guide/static/css/main.639f1633.chunk.css",
-    "main.js": "/hiking-guide/static/js/main.62e25da1.chunk.js",
-    "main.js.map": "/hiking-guide/static/js/main.62e25da1.chunk.js.map",
+    "main.css": "/hiking-guide/static/css/main.b946fdca.chunk.css",
+    "main.js": "/hiking-guide/static/js/main.35b2e6ab.chunk.js",
+    "main.js.map": "/hiking-guide/static/js/main.35b2e6ab.chunk.js.map",
     "runtime-main.js": "/hiking-guide/static/js/runtime-main.de22d540.js",
     "runtime-main.js.map": "/hiking-guide/static/js/runtime-main.de22d540.js.map",
     "static/js/2.f2702cb2.chunk.js": "/hiking-guide/static/js/2.f2702cb2.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.5bb19f0d.chunk.js": "/hiking-guide/static/js/3.5bb19f0d.chunk.js",
     "static/js/3.5bb19f0d.chunk.js.map": "/hiking-guide/static/js/3.5bb19f0d.chunk.js.map",
     "index.html": "/hiking-guide/index.html",
-    "static/css/main.639f1633.chunk.css.map": "/hiking-guide/static/css/main.639f1633.chunk.css.map",
+    "static/css/main.b946fdca.chunk.css.map": "/hiking-guide/static/css/main.b946fdca.chunk.css.map",
     "static/js/2.f2702cb2.chunk.js.LICENSE.txt": "/hiking-guide/static/js/2.f2702cb2.chunk.js.LICENSE.txt",
     "static/media/main.css": "/hiking-guide/static/media/VG-small.dcfa23c1.png",
     "static/media/climb-compass-large.1a1bea56.jpg": "/hiking-guide/static/media/climb-compass-large.1a1bea56.jpg",
@@ -35,7 +35,7 @@
   "entrypoints": [
     "static/js/runtime-main.de22d540.js",
     "static/js/2.f2702cb2.chunk.js",
-    "static/css/main.639f1633.chunk.css",
-    "static/js/main.62e25da1.chunk.js"
+    "static/css/main.b946fdca.chunk.css",
+    "static/js/main.35b2e6ab.chunk.js"
   ]
 }

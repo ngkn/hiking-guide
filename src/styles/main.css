@@ -60,7 +60,7 @@ a {
 }
 @media screen and (min-width: 1024px) {
   .layout-main {
-    padding-top: 12.5rem;
+    padding: 20rem 3rem 0 3rem;
     z-index: 15;
     background: none;
   }
@@ -89,6 +89,13 @@ header {
   align-items: center;
   width: 100%;
   padding: 1rem;
+  font-family: "Sans Serif", Arial, sans-serif;
+  font-weight: 700;
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    padding: 2rem 4rem 0 4rem;
+  }
 }
 
 .titles-wrapper {
@@ -119,7 +126,30 @@ header {
   }
 }
 .titles__guide {
-  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.6rem;
+  font-weight: 800;
+  width: max-content;
+  color: #fbd784;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  font-family: "Sans Serif", Arial, sans-serif;
+}
+@media screen and (min-width: 768px) {
+  .titles__guide {
+    font-size: 0.875rem;
+  }
+}
+.titles__line {
+  width: 40px;
+  margin-right: 2rem;
+  border: 1px solid#fbd784;
+}
+@media screen and (min-width: 768px) {
+  .titles__line {
+    width: 60px;
+  }
 }
 .titles__main {
   font-family: "Chronicle Display";
@@ -139,7 +169,17 @@ header {
   }
 }
 .titles__scroll {
-  font-size: 1.125rem;
+  display: flex;
+  width: max-content;
+  align-items: center;
+  font-size: 1rem;
+  font-family: "Sans Serif", Arial, sans-serif;
+}
+.titles__scroll-text {
+  margin-right: 1rem;
+}
+.titles__svg {
+  transform: rotate(90deg);
 }
 
 .logo {
@@ -184,6 +224,9 @@ header {
   .nav__item:last-of-type {
     margin-right: 0;
   }
+  .nav__link:hover {
+    color: #fbd784;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -206,6 +249,12 @@ header {
   position: relative;
   width: 30px;
   height: 30px;
+}
+.account:hover .account-svg-fill {
+  fill: #fbd784;
+}
+.account:hover .account__text {
+  color: #fbd784;
 }
 
 .gradient {
@@ -280,7 +329,7 @@ header {
     background: url("images/optimizeImages/HG-large.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 70%;
+    height: 80%;
   }
 }
 
@@ -311,7 +360,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
-    height: 100%;
+    height: 120%;
     top: 40%;
   }
 }
@@ -337,6 +386,7 @@ header {
   background-image: linear-gradient(135deg, #0b1d26, transparent 87%);
   width: inherit;
   height: inherit;
+  opacity: 0.4;
 }
 
 .backdrop {
@@ -405,7 +455,12 @@ header {
   flex-direction: column-reverse;
   max-width: 1462px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 4rem 1rem;
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding: 5rem 1rem 5rem 1rem;
+  }
 }
 .footer-title {
   color: #fbd784;
@@ -427,6 +482,12 @@ header {
     margin-top: 0;
   }
 }
+@media screen and (min-width: 1024px) {
+  .footer-logo-text {
+    flex: auto;
+    width: 100%;
+  }
+}
 .footer-text {
   width: auto;
   text-align: center;
@@ -444,6 +505,18 @@ header {
   display: flex;
   flex: 1;
   margin: 0;
+}
+@media screen and (min-width: 1024px) {
+  .footer-list {
+    flex: auto;
+    min-width: 500px;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer-list {
+    min-width: 486px;
+  }
 }
 .footer-list-blog {
   margin: 0;
@@ -465,6 +538,11 @@ header {
     justify-content: initial;
   }
 }
+@media screen and (min-width: 1024px) {
+  .footer-section {
+    flex: 0 0 auto;
+  }
+}
 @media screen and (min-width: 768px) {
   .footer {
     flex-direction: row;
@@ -480,6 +558,10 @@ header {
     position: absolute;
     bottom: 0;
   }
+}
+
+.author-name {
+  text-decoration: underline;
 }
 
 .card {
@@ -512,13 +594,13 @@ header {
 @media screen and (min-width: 1340px) {
   .card__number--even {
     top: -7rem;
-    left: -7rem;
+    left: -6rem;
   }
 }
 @media screen and (min-width: 1340px) {
   .card__number--odd {
     top: -7rem;
-    left: -2rem;
+    left: -1rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -641,6 +723,7 @@ header {
 }
 .card__text {
   font-size: 1.125rem;
+  line-height: 32px;
 }
 @media screen and (min-width: 768px) {
   .card__text {

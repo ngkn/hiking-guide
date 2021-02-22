@@ -22,6 +22,13 @@ header {
   align-items: center;
   width: 100%;
   padding: 1rem;
+
+  @include breakpoints.media(">=desktop", "screen") {
+    padding: 2rem 4rem 0 4rem;
+  }
+
+  font-family: "Sans Serif", Arial, sans-serif;
+  font-weight: 700;
 }
 
 .titles-wrapper {
@@ -50,7 +57,28 @@ header {
   }
 
   &__guide {
-    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.6rem;
+    font-weight: 800;
+    width: max-content;
+    color: variables.$honeyBees;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-family: "Sans Serif", Arial, sans-serif;
+
+    @include breakpoints.media(">=tablet", "screen") {
+      font-size: 0.875rem;
+    }
+  }
+  &__line {
+    width: 40px;
+    margin-right: 2rem;
+    border: unquote("1px solid" + variables.$honeyBees);
+
+    @include breakpoints.media(">=tablet", "screen") {
+      width: 60px;
+    }
   }
 
   &__main {
@@ -71,7 +99,19 @@ header {
   }
 
   &__scroll {
-    font-size: 1.125rem;
+    display: flex;
+    width: max-content;
+    align-items: center;
+    font-size: 1rem;
+    font-family: "Sans Serif", Arial, sans-serif;
+  }
+
+  &__scroll-text {
+    margin-right: 1rem;
+  }
+
+  &__svg {
+    transform: rotate(90deg);
   }
 }
 
@@ -117,6 +157,12 @@ header {
         margin-right: 0;
       }
     }
+
+    &__link {
+      &:hover {
+        color: variables.$honeyBees;
+      }
+    }
   }
 }
 
@@ -134,11 +180,24 @@ header {
     @include breakpoints.media(">=tablet", "screen") {
       display: block;
     }
+
+    // &:hover {
+    //   color: variables.$honeyBees;
+    // }
   }
   &__svg {
     position: relative;
     width: 30px;
     height: 30px;
+  }
+
+  &:hover {
+    .account-svg-fill {
+      fill: variables.$honeyBees;
+    }
+    .account__text {
+      color: variables.$honeyBees;
+    }
   }
 }
 
@@ -217,7 +276,7 @@ header {
     background: url("images/optimizeImages/HG-large.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 70%;
+    height: 80%;
   }
 }
 
@@ -247,7 +306,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
-    height: 100%;
+    height: 120%;
     top: 40%;
   }
 }
@@ -274,4 +333,5 @@ header {
   );
   width: inherit;
   height: inherit;
+  opacity: 0.4;
 }

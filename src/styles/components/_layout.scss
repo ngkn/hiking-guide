@@ -25,7 +25,7 @@
   background: variables.$bg-layout-main;
 
   @include breakpoints.media(">=desktop", "screen") {
-    padding-top: 12.5rem;
+    padding: 20rem 3rem 0 3rem;
     z-index: 15;
     background: none;
   }

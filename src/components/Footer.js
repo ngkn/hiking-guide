@@ -15,7 +15,12 @@ const Footer = () => {
             Get out there & discover your next slope, mountain & destination!
           </p>
           <div className="copyright">
-            Copyright 2019 MNTN, Inc. Terms & Privacy
+            Copyright 2021 MNTN, Inc. Terms & Privacy
+            <br />A concept by Kryston Schwarze
+            <br /> Developed by&nbsp;
+            <a className="author-name" href="https://github.com/ngkn">
+              Nathanael Ngouayeke
+            </a>
           </div>
         </div>
         <div className="footer-list">

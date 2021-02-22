@@ -31,14 +31,14 @@
     &--even {
       @include breakpoints.media(">=largeDesktop-number", "screen") {
         top: -7rem;
-        left: -7rem;
+        left: -6rem;
       }
     }
 
     &--odd {
       @include breakpoints.media(">=largeDesktop-number", "screen") {
         top: -7rem;
-        left: -2rem;
+        left: -1rem;
       }
     }
 
@@ -158,6 +158,7 @@
 
   &__text {
     font-size: 1.125rem;
+    line-height: 32px;
 
     @include breakpoints.media(">=tablet", "screen") {
       padding-bottom: 0;

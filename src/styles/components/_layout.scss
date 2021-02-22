@@ -1,0 +1,32 @@
+@use '../libs/breakpoints';
+@use '../helpers/variables';
+
+.layout {
+  position: relative;
+  max-width: 1920px;
+  min-height: 100vh;
+  margin: 0 auto;
+  // padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  @include breakpoints.media(">=desktop", "screen") {
+    // padding: 2rem 3rem;
+  }
+  background: variables.$bg-layout-main;
+}
+
+.layout-main {
+  position: relative;
+  flex: 1 0 auto;
+  padding: 0 1rem;
+  background: variables.$bg-layout-main;
+
+  @include breakpoints.media(">=desktop", "screen") {
+    padding: 20rem 3rem 0 3rem;
+    z-index: 15;
+    background: none;
+  }
+}

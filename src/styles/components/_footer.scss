@@ -1,0 +1,118 @@
+@use '../libs/breakpoints';
+@use '../helpers/variables';
+
+.footer {
+  display: flex;
+  flex-direction: column-reverse;
+  max-width: 1462px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+
+  @include breakpoints.media(">=desktop", "screen") {
+    padding: 5rem 1rem 5rem 1rem;
+  }
+  // @include breakpoints.media(">=largeDesktop", "screen") {
+  //   padding: 1rem 0 5rem 1rem;
+  // }
+
+  &-title {
+    color: variables.$honeyBees;
+    margin: 0 0 2rem 0;
+  }
+
+  &-logo-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin-top: 3rem;
+
+    @include breakpoints.media(">=tablet", "screen") {
+      align-items: flex-start;
+      justify-content: normal;
+      margin-top: 0;
+    }
+
+    @include breakpoints.media(">=desktop", "screen") {
+      flex: auto;
+      width: 100%;
+    }
+  }
+
+  &-text {
+    width: auto;
+    text-align: center;
+
+    @include breakpoints.media(">=tablet", "screen") {
+      width: 299px;
+      text-align: initial;
+    }
+  }
+
+  &-links-container {
+    margin: 0;
+  }
+
+  &-list {
+    display: flex;
+    flex: 1;
+    margin: 0;
+
+    @include breakpoints.media(">=desktop", "screen") {
+      flex: auto;
+      min-width: 500px;
+      justify-content: space-between;
+    }
+
+    @include breakpoints.media(">=desktop", "screen") {
+      min-width: 486px;
+    }
+  }
+
+  &-list-blog {
+    margin: 0;
+  }
+
+  &-link {
+    margin-bottom: 1.5rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &-section {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex: 1 1 auto;
+
+    @include breakpoints.media(">=tablet", "screen") {
+      justify-content: initial;
+    }
+
+    @include breakpoints.media(">=desktop", "screen") {
+      flex: 0 0 auto;
+    }
+  }
+
+  @include breakpoints.media(">=tablet", "screen") {
+    flex-direction: row;
+  }
+}
+
+.copyright {
+  opacity: 50%;
+  flex-grow: 1;
+
+  @include breakpoints.media(">=tablet", "screen") {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.author-name {
+  text-decoration: underline;
+}

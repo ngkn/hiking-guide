@@ -1,0 +1,337 @@
+@use '../helpers/variables';
+@use '../libs/breakpoints';
+
+header {
+  position: relative;
+  width: 100%;
+  height: 800px;
+
+  @include breakpoints.media(">=tablet", "screen") {
+    height: 1024px;
+  }
+
+  @include breakpoints.media(">=desktop", "screen") {
+    height: 100vh;
+  }
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+
+  @include breakpoints.media(">=desktop", "screen") {
+    padding: 2rem 4rem 0 4rem;
+  }
+
+  font-family: "Sans Serif", Arial, sans-serif;
+  font-weight: 700;
+}
+
+.titles-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titles {
+  position: fixed;
+  padding: 0 1rem;
+  max-width: 370px;
+  top: 10rem;
+  opacity: 1; // handler via JS
+
+  @include breakpoints.media(">=largePhone", "screen") {
+    max-width: 538px;
+  }
+
+  @include breakpoints.media(">=tablet", "screen") {
+    top: 20rem;
+    transform: translateY(-50%);
+    margin: 0 50px;
+    max-width: 652px;
+  }
+
+  &__guide {
+    display: flex;
+    align-items: center;
+    font-size: 0.6rem;
+    font-weight: 800;
+    width: max-content;
+    color: variables.$honeyBees;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-family: "Sans Serif", Arial, sans-serif;
+
+    @include breakpoints.media(">=tablet", "screen") {
+      font-size: 0.875rem;
+    }
+  }
+  &__line {
+    width: 40px;
+    margin-right: 2rem;
+    border: unquote("1px solid" + variables.$honeyBees);
+
+    @include breakpoints.media(">=tablet", "screen") {
+      width: 60px;
+    }
+  }
+
+  &__main {
+    font-family: "Chronicle Display";
+    font-size: 2rem;
+    line-height: 120%;
+    font-weight: 600;
+    text-transform: capitalize;
+
+    @include breakpoints.media(">=largePhone", "screen") {
+      font-size: 3rem;
+    }
+
+    @include breakpoints.media(">=tablet", "screen") {
+      // font-size: 4.688rem;
+      font-size: 3.688rem;
+    }
+  }
+
+  &__scroll {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    font-size: 1rem;
+    font-family: "Sans Serif", Arial, sans-serif;
+  }
+
+  &__scroll-text {
+    margin-right: 1rem;
+  }
+
+  &__svg {
+    transform: rotate(90deg);
+  }
+}
+
+.logo {
+  position: relative;
+  width: 108px;
+  height: 30px;
+}
+
+.burger-menu {
+  display: flex;
+  justify-content: center;
+  width: 30px;
+
+  &__icon {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+  @include breakpoints.media(">=tablet", "screen") {
+    display: none;
+  }
+}
+
+.nav {
+  display: none;
+  @include breakpoints.media(">=tablet", "screen") {
+    display: block;
+
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      margin-right: 2em;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    &__link {
+      &:hover {
+        color: variables.$honeyBees;
+      }
+    }
+  }
+}
+
+.account {
+  &__link {
+    @include breakpoints.media(">=tablet", "screen") {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 108px; // based to logo's
+    }
+  }
+  &__text {
+    display: none;
+    @include breakpoints.media(">=tablet", "screen") {
+      display: block;
+    }
+
+    // &:hover {
+    //   color: variables.$honeyBees;
+    // }
+  }
+  &__svg {
+    position: relative;
+    width: 30px;
+    height: 30px;
+  }
+
+  &:hover {
+    .account-svg-fill {
+      fill: variables.$honeyBees;
+    }
+    .account__text {
+      color: variables.$honeyBees;
+    }
+  }
+}
+
+.gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+
+  background: linear-gradient(
+    rgba(255, 0, 0, 0),
+    50%,
+    variables.$bg-layout-main
+  );
+
+  z-index: 15;
+
+  @include breakpoints.media(">=desktop", "screen") {
+    display: none;
+  }
+}
+
+.vg {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  left: 0;
+  bottom: 0;
+  background: url("images/optimizeImages/VG-small.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  z-index: 15;
+
+  @include breakpoints.media(">=tablet", "screen") {
+    background: url("images/optimizeImages/VG-medium.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 400px;
+  }
+
+  @include breakpoints.media(">=desktop", "screen") {
+    background: url("images/optimizeImages/VG-large.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 100%;
+
+    bottom: -60%;
+  }
+}
+
+.hg {
+  position: absolute;
+  width: 100%;
+  height: 800px;
+  left: 0;
+  top: 0;
+  background: url("images/optimizeImages/HG-small.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+
+  @include breakpoints.media(">=tablet", "screen") {
+    background: url("images/optimizeImages/HG-medium.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+
+    height: 840px;
+  }
+
+  @include breakpoints.media(">=desktop", "screen") {
+    background: url("images/optimizeImages/HG-large.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80%;
+  }
+}
+
+.mg {
+  position: absolute;
+  width: 100%;
+  height: 570px;
+  left: 0;
+  top: 48%;
+  background: url("images/optimizeImages/MG-small.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+  @include breakpoints.media(">=tablet", "screen") {
+    background: url("images/optimizeImages/MG-medium.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+    height: 760px;
+    top: 47%;
+  }
+
+  @include breakpoints.media(">=desktop", "screen") {
+    background: url("images/optimizeImages/MG-large@3x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 120%;
+    top: 40%;
+  }
+}
+
+.bgs-images {
+  position: absolute;
+  width: 100%;
+  height: 800px;
+
+  @include breakpoints.media(">=tablet", "screen") {
+    height: 1024px;
+  }
+  @include breakpoints.media(">=desktop", "screen") {
+    height: 100vh;
+  }
+}
+
+.gradient-bgs {
+  position: absolute;
+  background-image: linear-gradient(
+    135deg,
+    variables.$darkBlue,
+    transparent 87%
+  );
+  width: inherit;
+  height: inherit;
+  opacity: 0.4;
+}

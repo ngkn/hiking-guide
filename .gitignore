@@ -22,5 +22,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Config
- .eslintcache
+# styles
+/dart-sass
+main.css.map
+
+# config
+.eslintcache

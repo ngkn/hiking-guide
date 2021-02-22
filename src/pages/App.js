@@ -1,15 +1,60 @@
-import React from "react"
-import logo from "../images/logo.svg"
-import "../pages/App.css"
+import React, { useEffect, useState } from "react"
+
+import Layout from "../components/Layout"
+import CardView from "../components/CardView"
+
+import infos from "config/infos"
 
 const App = () => {
+  useEffect(() => {
+    const titlesClassname = document.querySelector(".titles")
+    let opacity
+    titlesClassname.style.opacity = 1 - window.pageYOffset / 600
+
+    //HG translate
+    const hgClassname = document.querySelector(".hg")
+
+    //MG translate
+    const mgClassname = document.querySelector(".mg")
+
+    window.addEventListener("scroll", () => {
+      opacity = window
+        .getComputedStyle(titlesClassname)
+        .getPropertyValue("opacity")
+
+      if (opacity === 0 || opacity < 0) {
+        console.log("superieur à 0  :>> ", opacity)
+        titlesClassname.style.opacity = 0
+      } else {
+        titlesClassname.style.opacity = 1 - window.pageYOffset / 600
+      }
+
+      // HG
+      hgClassname.style.transform = `translate3d(0, -${
+        // window.pageYOffset / 15
+        window.pageYOffset / 35
+      }%, 0)`
+
+      // MG
+      mgClassname.style.transform = `translate3d(0, -${
+        // window.pageYOffset / 35
+        window.pageYOffset / 75
+      }%, 0)`
+
+      console.log(window.pageYOffset / 6)
+    })
+  }, [])
+
   return (
-    <div>
-      <div>
-        <img src={logo} className="App-logo" alt="logo" />
+    <Layout>
+      <div className="cards-container">
+        {infos.cardInfoHiking.map((card) => (
+          <span key={card.number}>
+            <CardView card={card} />
+          </span>
+        ))}
       </div>
-      <h1 className="App">Hello</h1>
-    </div>
+    </Layout>
   )
 }
 

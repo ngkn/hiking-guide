@@ -43,6 +43,8 @@ A mockup made by Kryston Schwarze and can be find on [Figma](https://www.figma.c
 
 Mockup was only for Desktop. Mobile and Tablet version was made by myself.
 
+---
+
 ## Good practice
 
  * [ ] [Convention-commit](https://www.conventionalcommits.org/en/v1.0.0/)
